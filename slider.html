@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philosophy slide show</title>
+    <link rel="stylesheet" href="slider.css" />
+  </head>
+  <body>
+    <div id="main" class="banner">
+      <header>
+        <div class="logo">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            fill="currentColor"
+            viewBox="0 0 30 30"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.05 4.05A7 7 0 0 1 19 9c0 2.407-1.197 3.874-2.186 5.084l-.04.048C15.77 15.362 15 16.34 15 18a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1c0-1.612-.77-2.613-1.78-3.875l-.045-.056C6.193 12.842 5 11.352 5 9a7 7 0 0 1 2.05-4.95ZM9 21a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Zm1.586-13.414A2 2 0 0 1 12 7a1 1 0 1 0 0-2 4 4 0 0 0-4 4 1 1 0 0 0 2 0 2 2 0 0 1 .586-1.414Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="title">PHILOSITE</div>
+        <ul class="menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="slider.html">Philosophers</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <div class="slider">
+      <div class="list">
+        <div class="item active">
+          <img src="images/img1.jpg" alt="" />
+          <div class="content">
+            <p>Philosophist</p>
+            <h1>Socrates</h1>
+            <p>
+              Socrates was a foundational figure in Western philosophy, known
+              for his method of questioning to stimulate critical thinking and
+              illuminate ideas. His approach, called the Socratic method,
+              emphasized dialogue and the pursuit of virtue and knowledge.
+              Socrates never wrote down his teachings, and most of what we know
+              comes from his student, Plato.
+            </p>
+
+            <button id="b1" type="button" autofocus>Learn More !</button>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/img2.jpg" alt="" />
+          <div class="content">
+            <p>Philosophist</p>
+            <h1>Plato</h1>
+            <p>
+              Plato, a student of Socrates, was a prolific philosopher who
+              founded the Academy in Athens, one of the first institutions of
+              higher learning in the Western world. His works explore ideal
+              forms of government, justice, and the nature of reality, with his
+              theory of forms suggesting that the material world is only a
+              shadow of more perfect, abstract realities.
+            </p>
+
+            <button id="b2" type="button" autofocus>Learn More !</button>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/img3.jpg" alt="" />
+          <div class="content">
+            <p>Philosophist</p>
+            <h1>Aristotle</h1>
+            <p>
+              Aristotle, a student of Plato, made significant contributions to
+              many fields, including logic, ethics, biology, and metaphysics.
+              His development of syllogistic logic and his categorization of
+              knowledge laid the foundation for scientific methodology. Unlike
+              Plato, Aristotle believed in the importance of empirical
+              observation and practical experience.
+            </p>
+
+            <button id="b3" type="button" autofocus>Learn More !</button>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/img4.jpg" alt="" />
+          <div class="content">
+            <p>Philosophist</p>
+            <h1>René Descartes</h1>
+            <p>
+              René Descartes is often referred to as the father of modern
+              philosophy. A French thinker and mathematician, he sought to
+              establish a foundation for knowledge based on doubt and
+              skepticism. His famous declaration, "Cogito, ergo sum" ("I think,
+              therefore I am"), encapsulates his belief in the primacy of reason
+              in the search for truth.
+            </p>
+
+            <button id="b4" type="button" autofocus>Learn More !</button>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/img5.jpg" alt="" />
+          <div class="content">
+            <p>Philosophist</p>
+            <h1>Heraclitus</h1>
+            <p>
+              Heraclitus was an ancient Greek philosopher best known for his
+              doctrine of change, captured in his statement, "You cannot step
+              into the same river twice." He believed that the universe is in a
+              constant state of flux and that fire is the fundamental substance
+              underlying all change, reflecting his view of life’s eternal
+              transformation.
+            </p>
+
+            <button id="b5" type="button" autofocus>Learn More !</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+
+      <div class="thumbnail">
+        <div class="item active">
+          <img id="img1" src="images/img1.jpg" />
+          <div class="content">Socrates</div>
+        </div>
+        <div class="item">
+          <img id="img2" src="images/img2.jpg" />
+          <div class="content">Plato</div>
+        </div>
+        <div class="item">
+          <img id="img3" src="images/img3.jpg" />
+          <div class="content">Aristotle,</div>
+        </div>
+        <div class="item">
+          <img id="img4" src="images/img4.jpg" />
+          >
+          <div class="content">René Descartes</div>
+        </div>
+        <div class="item">
+          <img id="img5" src="images/img5.jpg" />
+          >
+          <div class="content">Heraclitus</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="slider.js" defer></script>
+    <script>
+      const myButton1 = document.getElementById("b1");
+      const myButton2 = document.getElementById("b2");
+      const myButton3 = document.getElementById("b3");
+      const myButton4 = document.getElementById("b4");
+      const myButton5 = document.getElementById("b5");
+
+      myButton1.addEventListener("click", function () {
+        window.open("https://en.wikipedia.org/wiki/Socrates", "_blank"); // Replace with your desired URL
+      });
+      myButton2.addEventListener("click", function () {
+        window.open("https://en.wikipedia.org/wiki/Plato", "_blank"); // Replace with your desired URL
+      });
+      myButton3.addEventListener("click", function () {
+        window.open("https://en.wikipedia.org/wiki/Aristotle", "_blank"); // Replace with your desired URL
+      });
+      myButton4.addEventListener("click", function () {
+        window.open("https://en.wikipedia.org/wiki/René Descartes", "_blank"); // Replace with your desired URL
+      });
+      myButton5.addEventListener("click", function () {
+        window.open("https://en.wikipedia.org/wiki/Heraclitus", "_blank"); // Replace with your desired URL
+      });
+    </script>
+  </body>
+</html>

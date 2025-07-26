@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+body {
+  font-family: Poppins;
+  font-weight: bold;
+  margin: 0px;
+  color: #eee;
+  background-image: url("images/blog_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html,
+body {
+  overflow: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: 50px 50px 1fr;
+  grid-template-rows: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  font-size: 20px;
+  position: relative;
+  margin: auto;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0, 0, 0.8);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(100px);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header .logo,
+header .title {
+  margin-left: 4rem;
+}
+
+header .logo {
+  margin-top: 20px;
+  margin-right: -10px;
+}
+
+header .title {
+  margin-left: 3rem;
+  margin-top: 5px;
+}
+
+header .menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-weight: bold;
+}
+.menu li a {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: #eee;
+}
+.menu li a::after {
+  content: "";
+  height: 4px;
+  width: 0%;
+  background: AZURE;
+  left: 0;
+  position: absolute;
+  bottom: -10px;
+  transition: 0.4s;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.slider {
+  height: 100vh;
+  margin-top: -50px;
+  position: relative;
+}
+
+.slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 1s ease-in-out;
+}
+
+.slider .list .item::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #000 10%, transparent);
+}
+
+.slider .list .item .content {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 500px;
+  max-width: 80%;
+  z-index: 1;
+}
+
+.slider .list .item .content p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.slider .list .item .content h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.slider .list .item .content p:nth-child(3) {
+  font-weight: normal;
+  font-family: "poppins";
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.slider .list .item.active {
+  opacity: 1;
+  z-index: 10;
+  transform: scale(1.05);
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h1,
+.slider .list .item.active p:nth-child(3),
+.slider .list .item.active button {
+  transform: translateY(40px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 1s 0.4s ease-in-out 1 forwards;
+}
+
+.slider .list .item.active h1 {
+  animation-delay: 0.5s;
+}
+
+.slider .list .item.active p:nth-child(3),
+.slider .list .item.active button {
+  animation-duration: 1s;
+}
+
+.arrows {
+  position: absolute;
+  top: 30%;
+  right: 80px;
+  z-index: 100;
+}
+
+.arrows button {
+  background-color: #eee5;
+  border: none;
+  font-family: "josefin sans";
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #eee;
+  transition: 0.5s;
+  font-size: xx-large;
+  margin-left: 3px;
+}
+
+.arrows button:hover {
+  background-color: #eee;
+  color: #0e0e0e;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  z-index: 11;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 200px;
+  gap: 10px;
+  width: 100%;
+  height: 250px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.thumbnail::-webkit-scrollbar {
+  width: 0;
+}
+
+.thumbnail .item {
+  width: 150px;
+  height: 220px;
+  filter: brightness(0.6);
+  transition: 0.5s;
+  flex-shrink: 0;
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  border-radius: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.thumbnail .item #img1,
+#img2 {
+  object-fit: cover;
+  object-position: center;
+}
+
+.thumbnail .item #img3 {
+  object-fit: cover;
+  object-position: 75%;
+}
+
+.thumbnail .item #img4 {
+  object-fit: cover;
+  object-position: 85%;
+}
+.thumbnail .item #img5 {
+  object-fit: cover;
+  object-position: 75%;
+}
+
+.thumbnail .item.active {
+  filter: brightness(1.5);
+  transform: scale(1.1);
+}
+
+.thumbnail .item .content {
+  position: absolute;
+  inset: auto 10px 10px 10px;
+}
+header .logo,
+header .title {
+  transition: left 0.3s ease;
+}
+
+@media screen and (max-width: 678px) {
+  .thumbnail {
+    justify-content: start;
+  }
+  .slider .list .item .content h1 {
+    font-size: 40px;
+  }
+
+  .slider .list .item .content button {
+    position: absolute;
+    bottom: -50px;
+  }
+  .arrows {
+    top: 10%;
+  }
+
+  header .logo,
+  header .title {
+    position: relative;
+    left: -60px;
+  }
+  header .title {
+    margin-left: 60px;
+    margin-top: 10px;
+  }
+}
+
+.slider .list .item .content button {
+  height: 50px;
+  width: 200px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  background-color: #eee5;
+  border: none;
+  font-family: "josefin sans";
+  color: #eee;
+  transition: 0.5s;
+  z-index: 100000;
+  position: absolute;
+}
+
+.slider .list .item.item.active .content button:hover {
+  height: 54px;
+  width: 205px;
+  background-color: #eee;
+  color: #0e0e0e;
+  cursor: pointer;
+  z-index: 100000;
+  font-size: 22px;
+  transition: 0.5s ease;
+}
