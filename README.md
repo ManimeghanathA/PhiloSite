@@ -25,6 +25,6 @@ A visually immersive **Philosophy Website** built using **HTML**, **CSS**, and *
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/philosophy-website.git
-   cd philosophy-website
+   git clone https://github.com/ManimeghanathA/PhiloSite
+   cd PhileSite
    ```
